@@ -22,7 +22,7 @@ body {
   font-size: var(--font-size-sm);
 
   /** Sets the font size to 16px **/
-  line-height: 1;
+  line-height: 1.5;
 
   /* Sets the line-height to 1.6 */
   margin: 30px;
@@ -98,7 +98,7 @@ footer {
   transition: 1s opacity;
   margin: auto;
   line-height: 1;
-  width: fit-content;
+  width: 250px;
 }
 
 .button:hover,
