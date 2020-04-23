@@ -1,5 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /**common styling**/
+
 body {
   font-family: 'Cantata One', serif;
   font-weight: 400;
@@ -9,12 +11,11 @@ body {
   /* Sets the line-height to 1.6 */
   margin: 30px;
   background-image: url("../img/bg.png");
-  background-color: #F5F5DC;
 }
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 header {
@@ -34,15 +35,15 @@ header {
 
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
   height: 60px;
 }
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -61,8 +62,8 @@ footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 
@@ -71,7 +72,10 @@ footer {
   font-weight: bold;
 }
 
-.button {
+.button{
+  border-radius: 5px;
+  padding: .5em;
+  text-decoration: none;
   /* overwrites browser defaults */
   /* resets the border */
   border: none;
@@ -88,30 +92,14 @@ footer {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   -webkit-transition: 1s opacity;
   transition: 1s opacity;
-  margin-top: 20px;
+  margin:auto;
+  line-height: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
-  font-family: inherit;
-  /* style button */
-  background-color: #164444;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 1s opacity;
-  transition: 1s opacity;
-  margin-top: 20px;
-}
-
-button:hover, button:focus {
+.button:hover, .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -195,12 +183,12 @@ a:hover, a:focus {
 
 #path322 {
   -webkit-animation: 4s color-change2 infinite alternate linear;
-  animation: 4s color-change2 infinite alternate linear
+          animation: 4s color-change2 infinite alternate linear
 }
 
 @-webkit-keyframes color-change2 {
   0% {
-    fill: #fcffad;
+    fill: #f76414;
   }
 
   50% {
@@ -208,7 +196,7 @@ a:hover, a:focus {
   }
 
   100% {
-    fill: #f76414;
+    fill: #fcffad;
   }
 }
 
@@ -228,30 +216,30 @@ a:hover, a:focus {
 
 #path198 {
   -webkit-animation: 15s flight-move infinite linear;
-  animation: 15s flight-move infinite linear;
+          animation: 15s flight-move infinite linear;
 }
 
 @-webkit-keyframes flight-move {
   from {
     -webkit-transform: translate(-400px, -50px);
-    transform: translate(-400px, -50px);
+            transform: translate(-400px, -50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 
 @keyframes flight-move {
   from {
     -webkit-transform: translate(-400px, -50px);
-    transform: translate(-400px, -50px);
+            transform: translate(-400px, -50px);
   }
 
   to {
     -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 
@@ -298,7 +286,7 @@ a:hover, a:focus {
 
 .contact-details {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
   margin-left: 20px;
 }
 
@@ -308,7 +296,7 @@ a:hover, a:focus {
 
 .contact-form {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
   margin-left: 20px;
 }
 
@@ -392,8 +380,8 @@ a:hover, a:focus {
   .contact-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-flow: column;
-    flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
     width: 100%;
     padding-top: 20px;
   }

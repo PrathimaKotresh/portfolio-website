@@ -25,7 +25,6 @@ body {
   /* Sets the line-height to 1.6 */
   margin: 30px;
   background-image: url("../img/bg.png");
-  background-color: var(--background-primary-color);
 }
 
 * {
@@ -75,7 +74,10 @@ footer {
   font-weight: var(--font-weight-default);
 }
 
-.button, button {
+.button{
+  border-radius: 5px;
+  padding: .5em;
+  text-decoration: none;
   /* overwrites browser defaults */
   /* resets the border */
   border: none;
@@ -91,10 +93,12 @@ footer {
   /* width of the border, type, color */
   border-bottom: 2px solid var(--border-secondary-color);
   transition: 1s opacity;
-  margin-top: 20px;
+  margin-top: auto;
+  line-height: 1;
+  width: fit-content;
 }
 
-button:hover, button:focus {
+.button:hover, .button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
