@@ -57,6 +57,7 @@ header {
 }
 
 footer {
+  margin-top: 0;
   font-size: var(--font-size-sm);
   line-height: 0.5;
   font-weight: var(--font-weight-default);
@@ -228,6 +229,10 @@ a:focus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  grid-template-areas:
+    "work1 work2 work6"
+    "work3 work4 work6"
+    "work5 work5 work5";
 }
 
 /* Grid fallback */
@@ -240,9 +245,29 @@ a:focus {
   width: auto;
 }
 
-.grid__item:last-child {
-  grid-column: 3 / 3;
-  grid-row: 1 / 3;
+.work1 {
+  grid-area: work1;
+}
+
+.work2 {
+  grid-area: work2;
+}
+
+.work3 {
+  grid-area: work3;
+}
+
+.work4 {
+  grid-area: work4;
+}
+
+.work5 {
+  grid-area: work5;
+  grid-column: 1;
+}
+
+.work6 {
+  grid-area: work6;
 }
 
 /** contact.html styling **/
@@ -287,12 +312,27 @@ a:focus {
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "work1"
+      "work2"
+      "work3"
+      "work4"
+      "work5"
+      "work6";
+  }
+
+  footer {
+    padding: 50px 20px;
   }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "work1 work2"
+      "work3 work4"
+      "work5 work6";
   }
 }
 
@@ -334,10 +374,6 @@ a:focus {
   svg {
     width: 100%;
     height: 200px;
-  }
-
-  footer {
-    margin-top: 0;
   }
 
   .contact-content {
