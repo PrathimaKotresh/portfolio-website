@@ -46,6 +46,12 @@ header {
   padding: 20px;
 }
 
+.project-page-header {
+  display: flex;
+  width: 100%;
+  padding: 0;
+}
+
 .page-header__item {
   flex: 0 1 200px;
   height: 60px;
@@ -54,6 +60,33 @@ header {
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
+}
+
+.demoContainer {
+  position: relative;
+  text-align: center;
+}
+
+.demoCentered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  color: gray;
+  font-size: 30px;
+}
+
+.demoContainer:hover .demoCentered {
+  visibility: visible;
+}
+
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
 }
 
 footer {
@@ -65,6 +98,15 @@ footer {
 }
 
 .page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-footer {
+  padding-top: 20px;
+  padding-bottom: 0;
   clear: both;
   display: flex;
   flex-direction: column;
@@ -161,7 +203,7 @@ a:focus {
 /** index.html styling **/
 .profile {
   max-width: 700px;
-  margin: 130px auto 220px;
+  margin: 130px auto 0;
 }
 
 .profile__portrait {
@@ -270,6 +312,33 @@ a:focus {
   grid-area: work6;
 }
 
+/* Styling CSS grid */
+.projectGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    "projectImage projectDescription";
+}
+
+/* Grid fallback */
+.projectGrid__item {
+  display: inline-block;
+  background-color: var(--background-secondary-color);
+  padding: 10px;
+
+  /* Set width to auto */
+  width: auto;
+}
+
+.projectImage {
+  grid-area: projectImage;
+}
+
+.projectDescription {
+  grid-area: projectDescription;
+}
+
 /** contact.html styling **/
 .contact-content {
   display: flex;
@@ -359,6 +428,14 @@ a:focus {
     grid-row: auto / auto;
   }
 
+  /* Styling CSS grid */
+  .projectGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "projectImage"
+      "projectDescription";
+  }
+
   h1 {
     font-size: 22px;
   }
@@ -389,5 +466,15 @@ a:focus {
   .contact-form {
     margin-top: 30px;
     margin-left: 0;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  /* Styling CSS grid */
+  .projectGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "projectImage"
+      "projectDescription";
   }
 }

@@ -40,6 +40,14 @@ header {
   padding: 20px;
 }
 
+.project-page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0;
+}
+
 .page-header__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 200px;
@@ -54,6 +62,35 @@ header {
   text-align: right;
 }
 
+.demoContainer {
+  position: relative;
+  text-align: center;
+}
+
+.demoCentered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  color: gray;
+  font-size: 30px;
+}
+
+.demoContainer:hover .demoCentered {
+  visibility: visible;
+}
+
+.zoom {
+  transition: transform 0.2s;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+}
+
 footer {
   margin-top: 0;
   font-size: 16px;
@@ -63,6 +100,20 @@ footer {
 }
 
 .page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-page-footer {
+  padding-top: 20px;
+  padding-bottom: 0;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,6 +372,40 @@ a:focus {
   grid-area: work6;
 }
 
+/* Styling CSS grid */
+.projectGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.2fr 20px 0.8fr;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-gap: 20px;
+  -ms-grid-rows: auto 20px auto;
+  grid-template-areas:
+    "projectImage projectDescription";
+}
+
+/* Grid fallback */
+.projectGrid__item {
+  display: inline-block;
+  background-color: LightGrey;
+  padding: 10px;
+
+  /* Set width to auto */
+  width: auto;
+}
+
+.projectImage {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: projectImage;
+}
+
+.projectDescription {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: projectDescription;
+}
+
 /** contact.html styling **/
 .contact-content {
   display: -webkit-box;
@@ -484,6 +569,31 @@ a:focus {
     grid-row: auto / auto;
   }
 
+  /* Styling CSS grid */
+  .projectGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    -ms-grid-rows: auto 20px auto;
+    grid-template-areas:
+      "projectImage"
+      "projectDescription";
+  }
+
+  .projectImage {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: projectImage;
+  }
+
+  .projectDescription {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: projectDescription;
+  }
+
   h1 {
     font-size: 22px;
   }
@@ -517,5 +627,32 @@ a:focus {
   .contact-form {
     margin-top: 30px;
     margin-left: 0;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  /* Styling CSS grid */
+  .projectGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    -ms-grid-rows: auto 20px auto;
+    grid-template-areas:
+      "projectImage"
+      "projectDescription";
+  }
+
+  .projectImage {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: projectImage;
+  }
+
+  .projectDescription {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: projectDescription;
   }
 }
