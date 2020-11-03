@@ -318,9 +318,8 @@ a:focus {
   grid-gap: 20px;
   -ms-grid-rows: auto 20px auto 20px auto;
   grid-template-areas:
-    "work1 work2 work6"
-    "work3 work4 work6"
-    "work5 work5 work5";
+    "work1 work2 work3"
+    "work4 work5 work6";
 }
 
 /* Grid fallback */
@@ -336,40 +335,31 @@ a:focus {
 .work1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: work1;
 }
 
 .work2 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: work2;
 }
 
 .work3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: work3;
 }
 
 .work4 {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
-  grid-area: work4;
 }
 
 .work5 {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: work5;
-  grid-column: 1;
 }
 
 .work6 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 5;
-  grid-area: work6;
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
 }
 
 /* Styling CSS grid */

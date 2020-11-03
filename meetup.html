@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>My Portfolio</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="myWorks" href="work.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cantata+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.production.css">
+</head>
+
+<body>
+  <header class="project-page-header">
+    <img src="img/LOGO.png" alt="logo" class="page-header__item">
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Main content -->
+  <section>
+    <div class="projectGrid">
+      <div class="projectGrid__item projectImage">
+        <h2>Meetup App</h2>
+        <p>
+          Objective: To build a serverless “meetup upcoming events for a selected city” ReactJS progressive web application using using a test-driven
+          development (TDD) technique. The application uses the Meetup API to fetch upcoming events for a selected city.
+        </p>
+        <img src="./img/meetup-image.png" alt="meetup" width="100%">
+      </div>
+      <div class="projectGrid__item projectDescription">
+        <h3>
+          Technical details:
+        </h3>
+        <ul>
+          <li>
+            ReactJS
+          </li>
+          <li>
+            App hosted in gh-pages
+          </li>
+          <li>
+            API communication using axios
+          </li>
+          <li>
+            Serverless functions for authorization server using AWS lambda
+          </li>
+          <li>
+            An alert system using an OOP approach
+          </li>
+          <li>
+            Unit Testing and Integration Testing using Jest, enzyme
+          </li>
+          <li>
+            User acceptance testing using jest-cucumber
+          </li>
+          <li>
+            E2E testing using puppeteer
+          </li>
+          <li>
+            Application performance monitoring using Atatus, integrated into app using atatus-js
+          </li>
+          <li>
+            Conversion of app into Progressive Web App (PWA) using Lighthouse tool
+          </li>
+          <li>
+            Data Visualization using Recharts
+          </li>
+        </ul>
+        <a target="_blank" href="https://github.com/PrathimaKotresh/meetup" class="btn btn-primary">GitHub Repo</a>
+        <br>
+        <a target="_blank" href="https://prathimakotresh.github.io/meetup/" class="btn btn-primary">View Live</a>
+      </div>
+    </div>
+  </section>
+  <footer class="project-page-footer">
+    <p class="footerHeader">Find me on</p>
+    <div class="social-media">
+      <a href="https://github.com/PrathimaKotresh" target="_blank"><img src="img/githubicon.svg" width="30" height="30" alt="github"></a>
+      <a href="https://www.linkedin.com/in/prathima-k-9763a184/" target="_blank"><img src="img/linkedinicon.svg" width="30" height="30" alt="linkedin"></a>
+      <a href="https://twitter.com/Prathim24030582?s=09" target="_blank"><img src="img/twittericon.svg" width="30" height="30" alt="twitter"></a>
+    </div>
+    <a href="skype:live:.cid.633c7ca494fbea5c" class="button contactButton" download>Connect me on Skype</a>
+  </footer>
+  <script src="js/tota11y.min.js"></script>
+</body>
+
+</html>

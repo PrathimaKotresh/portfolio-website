@@ -272,9 +272,8 @@ a:focus {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   grid-template-areas:
-    "work1 work2 work6"
-    "work3 work4 work6"
-    "work5 work5 work5";
+    "work1 work2 work3"
+    "work4 work5 work6";
 }
 
 /* Grid fallback */
@@ -305,7 +304,6 @@ a:focus {
 
 .work5 {
   grid-area: work5;
-  grid-column: 1;
 }
 
 .work6 {
